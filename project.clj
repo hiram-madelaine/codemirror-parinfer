@@ -8,7 +8,6 @@
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.122"]
-                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [parinfer "0.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.0"]
