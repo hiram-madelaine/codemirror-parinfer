@@ -66,9 +66,8 @@
 (def editor-opts
   {:mode "clojure-parinfer"
    :matchBrackets true
-   :extraKeys {:Tab on-tab}})
-
-(aset js/CodeMirror "keyMap" "default" "Shift-Tab" "indentLess")
+   :extraKeys {:Tab on-tab
+               :Shift-Tab "indentLess"}})
 
 (defn create-regular-editor!
   "Create a non-parinfer editor."
