@@ -15,14 +15,14 @@
 
   :source-paths []
 
-  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
+  :clean-targets ^{:protect false} ["resources/public/js/compiled/out" "target"]
 
   :cljsbuild {
     :test-commands {"test" ["node" "resources/public/js/compiled/parinfer-test.js"]}
     :builds [{:id "dev"
               :source-paths ["src"]
-              :figwheel {:on-jsload "parinfer-codemirror.core/on-js-reload" }
-              :compiler {:main parinfer-codemirror.core
+              :figwheel {:on-jsload "parinfer-codemirror.example/on-js-reload" }
+              :compiler {:main parinfer-codemirror.example
                          :asset-path "js/compiled/out"
                          :output-to "resources/public/js/compiled/parinfer.js"
                          :output-dir "resources/public/js/compiled/out"
@@ -31,7 +31,7 @@
               :source-paths ["src"]
               :compiler {:output-to "resources/public/js/compiled/parinfer.js"
                          :externs ["resources/public/codemirror/lib/closure-externs.js"]
-                         :main      parinfer-codemirror.core
+                         :main      parinfer-codemirror.example
                          :optimizations :advanced
                          :pretty-print false}}
 
