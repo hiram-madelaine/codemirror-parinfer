@@ -89,7 +89,7 @@
 ;;----------------------------------------------------------------------
 
 (defn on-state-change
-  "Called everytime the state changes to sync the code editor."
+  "Called every time the state changes to sync the code editor."
   [_ _ old-state new-state]
   (doseq [[k {:keys [cm text]}] new-state]
     (let [changed? (not= text (.getValue cm))]
