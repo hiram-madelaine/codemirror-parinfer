@@ -56,8 +56,8 @@
        cm))))
 
 (defn render-dev! []
-  +  (create-editor! "code-indent-mode" :indent-mode)
-  +  (create-editor! "code-paren-mode" :paren-mode {:parinfer-mode :paren-mode})
-  +  (start-editor-sync!))
-+
-+(render-dev!)
+    (create-editor! "code-indent-mode" :indent-mode)
+    (create-editor! "code-paren-mode" :paren-mode {:parinfer-mode :paren-mode})
+    (start-editor-sync!))
+
+(render-dev!)

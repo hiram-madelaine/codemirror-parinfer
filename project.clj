@@ -1,4 +1,4 @@
-(defproject viebel/codemirror-parinfer "0.0.2"
+(defproject viebel/codemirror-parinfer "0.0.3"
   :description "site for illustrating the value of Parinfer"
   :url "http://shaunlebron.github.io/parinfer"
 
@@ -31,7 +31,7 @@
               :source-paths ["src"]
               :compiler {:output-to "resources/public/js/compiled/parinfer.js"
                          :externs ["resources/public/codemirror/lib/closure-externs.js"]
-                         :main      parinfer-codemirror.example
+                         :main      parinfer-codemirror.editor
                          :optimizations :advanced
                          :pretty-print false}}
 
