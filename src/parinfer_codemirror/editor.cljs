@@ -104,3 +104,9 @@
   ;; sync state changes to the editor
   (add-watch state :editor-updater on-state-change)
   (force-editor-sync!))
+
+(defn ^:export parinferize-and-sync!
+  "Add parinfer goodness to a codemirror editor"
+  [cm key- parinfer-mode initial-value]
+  (parinferize! cm key- parinfer-mode initial-value)
+  (start-editor-sync!))

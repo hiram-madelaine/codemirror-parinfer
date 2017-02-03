@@ -1,4 +1,4 @@
-(defproject codemirror-parinfer "0.0-SNAPSHOT"
+(defproject viebel/codemirror-parinfer "0.0.3"
   :description "site for illustrating the value of Parinfer"
   :url "http://shaunlebron.github.io/parinfer"
 
@@ -6,14 +6,14 @@
             :url "https://github.com/shaunlebron/parinfer/blob/master/LICENSE.md"
             :distribution :repo}
 
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.122"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.9.293"]
                  [parinfer "0.2.3"]]
 
-  :plugins [[lein-cljsbuild "1.1.0"]
-            [lein-figwheel "0.4.0"]]
+  :plugins [[lein-cljsbuild "1.1.3"]
+            [lein-figwheel "0.5.8"]]
 
-  :source-paths []
+  :source-paths ["src"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled/out" "target"]
 
@@ -31,7 +31,7 @@
               :source-paths ["src"]
               :compiler {:output-to "resources/public/js/compiled/parinfer.js"
                          :externs ["resources/public/codemirror/lib/closure-externs.js"]
-                         :main      parinfer-codemirror.example
+                         :main      parinfer-codemirror.editor
                          :optimizations :advanced
                          :pretty-print false}}
 
